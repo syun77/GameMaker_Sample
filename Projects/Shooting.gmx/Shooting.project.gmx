@@ -9,6 +9,8 @@
     <sprite>sprites\spr_player</sprite>
     <sprite>sprites\spr_wall</sprite>
     <sprite>sprites\spr_shot</sprite>
+    <sprite>sprites\spr_nasu</sprite>
+    <sprite>sprites\spr_bullet</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_back</background>
@@ -20,6 +22,8 @@
     <object>objects\obj_gameMgr</object>
     <object>objects\obj_wall</object>
     <object>objects\obj_shot</object>
+    <object>objects\obj_enemy</object>
+    <object>objects\obj_bullet</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\room_main</room>
