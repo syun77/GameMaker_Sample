@@ -26,8 +26,8 @@
     <object>objects\obj_bullet</object>
   </objects>
   <rooms name="rooms">
-    <room>rooms\room_main</room>
-    <room>rooms\room1</room>
+    <room>rooms\rm_main</room>
+    <room>rooms\rm_title</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
