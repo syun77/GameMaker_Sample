@@ -12,6 +12,7 @@
     <sprite>sprites\spr_nasu</sprite>
     <sprite>sprites\spr_bullet</sprite>
     <sprite>sprites\spr_logo</sprite>
+    <sprite>sprites\spr_pudding</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_back</background>
@@ -27,10 +28,11 @@
     <object>objects\obj_bullet</object>
     <object>objects\obj_titleMgr</object>
     <object>objects\obj_logo</object>
+    <object>objects\obj_enemyBoss</object>
   </objects>
   <rooms name="rooms">
-    <room>rooms\rm_title</room>
     <room>rooms\rm_main</room>
+    <room>rooms\rm_title</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
