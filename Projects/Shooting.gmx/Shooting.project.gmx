@@ -27,6 +27,7 @@
   </objects>
   <rooms name="rooms">
     <room>rooms\room_main</room>
+    <room>rooms\room1</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
