@@ -17,7 +17,7 @@
     <object>objects\obj_wall</object>
   </objects>
   <rooms name="rooms">
-    <room>rooms\room_main</room>
+    <room>rooms\rm_main</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>

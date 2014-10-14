@@ -11,6 +11,90 @@
     <event eventtype="8" enumb="64">
       <action>
         <libid>1</libid>
+        <id>404</id>
+        <kind>0</kind>
+        <userelative>0</userelative>
+        <isquestion>-1</isquestion>
+        <useapplyto>0</useapplyto>
+        <exetype>1</exetype>
+        <functionname>action_if_number</functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>10</kind>
+            <object>obj_player</object>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string>0</string>
+          </argument>
+          <argument>
+            <kind>4</kind>
+            <string>0</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>422</id>
+        <kind>1</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>0</useapplyto>
+        <exetype>0</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>514</id>
+        <kind>0</kind>
+        <userelative>-1</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>1</exetype>
+        <functionname>action_draw_text</functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>2</kind>
+            <string>Game Over!#Hit SPACE key</string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string>room_width / 2</string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string>room_height / 2</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>424</id>
+        <kind>2</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>0</useapplyto>
+        <exetype>0</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+      </action>
+      <action>
+        <libid>1</libid>
         <id>613</id>
         <kind>0</kind>
         <userelative>-1</userelative>
@@ -48,6 +132,84 @@
         <useapplyto>0</useapplyto>
         <exetype>1</exetype>
         <functionname>action_restart_game</functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+      </action>
+    </event>
+    <event eventtype="9" enumb="32">
+      <action>
+        <libid>1</libid>
+        <id>404</id>
+        <kind>0</kind>
+        <userelative>0</userelative>
+        <isquestion>-1</isquestion>
+        <useapplyto>0</useapplyto>
+        <exetype>1</exetype>
+        <functionname>action_if_number</functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>10</kind>
+            <object>obj_player</object>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string>0</string>
+          </argument>
+          <argument>
+            <kind>4</kind>
+            <string>0</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>422</id>
+        <kind>1</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>0</useapplyto>
+        <exetype>0</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>224</id>
+        <kind>0</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>0</useapplyto>
+        <exetype>1</exetype>
+        <functionname>action_another_room</functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>11</kind>
+            <room>rm_title</room>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>424</id>
+        <kind>2</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>0</useapplyto>
+        <exetype>0</exetype>
+        <functionname></functionname>
         <codestring></codestring>
         <whoName>self</whoName>
         <relative>0</relative>
