@@ -65,7 +65,7 @@
           </argument>
           <argument>
             <kind>0</kind>
-            <string>180</string>
+            <string>180-2</string>
           </argument>
         </arguments>
       </action>
@@ -101,7 +101,7 @@
           </argument>
           <argument>
             <kind>0</kind>
-            <string>180-2</string>
+            <string>180</string>
           </argument>
         </arguments>
       </action>
