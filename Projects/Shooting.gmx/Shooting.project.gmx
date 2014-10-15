@@ -15,6 +15,7 @@
     <sprite>sprites\spr_pudding</sprite>
     <sprite>sprites\spr_tako</sprite>
     <sprite>sprites\spr_5box</sprite>
+    <sprite>sprites\spr_radish</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_back</background>
@@ -33,6 +34,7 @@
     <object>objects\obj_enemyBoss</object>
     <object>objects\obj_enemyTako</object>
     <object>objects\obj_enemy5box</object>
+    <object>objects\obj_enemyRadish</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_main</room>
