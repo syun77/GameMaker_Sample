@@ -25,7 +25,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>timer</string>
+            <string>battery_direction</string>
           </argument>
           <argument>
             <kind>0</kind>
@@ -51,7 +51,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>timer</string>
+            <string>battery_direction</string>
           </argument>
           <argument>
             <kind>0</kind>
@@ -75,7 +75,7 @@
         <arguments>
           <argument>
             <kind>0</kind>
-            <string>timer % 16</string>
+            <string>battery_direction % 16</string>
           </argument>
           <argument>
             <kind>0</kind>
@@ -133,7 +133,7 @@
           </argument>
           <argument>
             <kind>0</kind>
-            <string>timer % 360</string>
+            <string>battery_direction % 360</string>
           </argument>
         </arguments>
       </action>

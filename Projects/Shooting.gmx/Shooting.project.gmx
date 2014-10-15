@@ -32,7 +32,7 @@
     <object>objects\obj_logo</object>
     <object>objects\obj_enemyBoss</object>
     <object>objects\obj_enemyTako</object>
-    <object>objects\obj_5box</object>
+    <object>objects\obj_enemy5box</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_main</room>
