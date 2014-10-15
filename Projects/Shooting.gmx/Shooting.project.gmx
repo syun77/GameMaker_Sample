@@ -13,6 +13,8 @@
     <sprite>sprites\spr_bullet</sprite>
     <sprite>sprites\spr_logo</sprite>
     <sprite>sprites\spr_pudding</sprite>
+    <sprite>sprites\spr_tako</sprite>
+    <sprite>sprites\spr_5box</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_back</background>
@@ -29,6 +31,8 @@
     <object>objects\obj_titleMgr</object>
     <object>objects\obj_logo</object>
     <object>objects\obj_enemyBoss</object>
+    <object>objects\obj_enemyTako</object>
+    <object>objects\obj_5box</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_main</room>
