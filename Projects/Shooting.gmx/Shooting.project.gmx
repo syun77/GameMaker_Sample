@@ -40,6 +40,9 @@
     <object>objects\obj_enemy5box</object>
     <object>objects\obj_enemyRadish</object>
   </objects>
+  <timelines name="timelines">
+    <timeline>timelines\tml_boss</timeline>
+  </timelines>
   <rooms name="rooms">
     <room>rooms\rm_main</room>
     <room>rooms\rm_title</room>
