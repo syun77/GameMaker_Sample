@@ -16,10 +16,10 @@
     <sprite>sprites\spr_nasu</sprite>
     <sprite>sprites\spr_bullet</sprite>
     <sprite>sprites\spr_logo</sprite>
-    <sprite>sprites\spr_pudding</sprite>
     <sprite>sprites\spr_tako</sprite>
     <sprite>sprites\spr_5box</sprite>
     <sprite>sprites\spr_radish</sprite>
+    <sprite>sprites\spr_pudding</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_back</background>
@@ -33,12 +33,12 @@
     <object>objects\obj_shot</object>
     <object>objects\obj_enemy</object>
     <object>objects\obj_bullet</object>
-    <object>objects\obj_titleMgr</object>
     <object>objects\obj_logo</object>
-    <object>objects\obj_enemyBoss</object>
+    <object>objects\obj_titleMgr</object>
     <object>objects\obj_enemyTako</object>
     <object>objects\obj_enemy5box</object>
     <object>objects\obj_enemyRadish</object>
+    <object>objects\obj_enemyBoss</object>
   </objects>
   <timelines name="timelines">
     <timeline>timelines\tml_boss</timeline>
