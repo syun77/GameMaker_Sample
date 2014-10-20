@@ -192,6 +192,7 @@ if(vspeed &lt; 0)
           <argument>
             <kind>1</kind>
             <string>/// 重力と落下速度を無効化する
+x += hspeed; // 左右にはぶつからないので足し込む
 gravity = 0;
 vspeed = 0;
 // 下にある床に密着させる
