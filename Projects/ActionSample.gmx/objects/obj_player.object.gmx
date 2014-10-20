@@ -8,6 +8,36 @@
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
+    <event eventtype="0" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// 変数初期化
+
+// アニメの状態
+animState = ANIM_STAND;
+
+// アニメーション用タイマー
+tAnim = 0;
+
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
     <event eventtype="3" enumb="0">
       <action>
         <libid>1</libid>
@@ -117,6 +147,43 @@ if(vspeed &lt; 0)
     // 上の壁に密着させる
     move_contact_solid(90, -1);
   }
+}
+
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// アニメの状態を判定
+if(hspeed == 0 and vspeed == 0)
+{
+  // 待機中
+  animState = ANIM_STAND;
+}
+else if(hspeed != 0 and vspeed == 0)
+{
+  // 歩き中
+  animState = ANIM_WALK;
+}
+else if(vspeed != 0)
+{
+  // ジャンプ中
+  animState = ANIM_JUMP;
 }
 
 </string>
@@ -290,17 +357,59 @@ move_contact_solid(270, -1);
     <event eventtype="8" enumb="0">
       <action>
         <libid>1</libid>
-        <id>500</id>
-        <kind>0</kind>
+        <id>603</id>
+        <kind>7</kind>
         <userelative>0</userelative>
         <isquestion>0</isquestion>
-        <useapplyto>0</useapplyto>
+        <useapplyto>-1</useapplyto>
         <exetype>2</exetype>
         <functionname></functionname>
-        <codestring>draw_self();</codestring>
+        <codestring></codestring>
         <whoName>self</whoName>
         <relative>0</relative>
         <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// プレイヤーの描画
+var subImage = 0;
+switch(animState)
+{
+case ANIM_STAND:
+  // 待機中
+  if(irandom(30) == 0)
+  {
+    subImage = 2;
+  }
+  else
+  {
+    subImage = 0;
+  }
+  break;
+  
+case ANIM_WALK:
+  // 歩き中
+  if(x % 2 == 0)
+  {
+    subImage = 0;
+  }
+  else
+  {
+    subImage = 1;
+  }  
+  break;
+  
+case ANIM_JUMP:
+  // ジャンプ中
+  subImage = 1;
+  break;
+}
+
+draw_sprite(spr_player, subImage, x, y);
+
+</string>
+          </argument>
+        </arguments>
       </action>
     </event>
   </events>
