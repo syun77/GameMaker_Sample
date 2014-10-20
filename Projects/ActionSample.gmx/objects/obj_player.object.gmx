@@ -27,12 +27,17 @@
             <kind>1</kind>
             <string>/// 変数初期化
 
-// アニメの状態
-animState = ANIM_STAND;
+// 状態
+state = STATE_STAND;
 
 // アニメーション用タイマー
 tAnim = 0;
 
+// 画像番号
+subImage = 0;
+
+// 向き
+dir = DIR_RIGHT;
 </string>
           </argument>
         </arguments>
@@ -62,6 +67,7 @@ if(keyboard_check(vk_left)) {
   if(place_free(x-PLAYER_HSPEED, y)) {
     // 移動可能なので左へ移動
     hspeed = -PLAYER_HSPEED;
+    dir = DIR_LEFT;
   }
   else {
     // 移動できないので壁に密着させる
@@ -72,6 +78,7 @@ else if(keyboard_check(vk_right)) {
   if(place_free(x+PLAYER_HSPEED, y)) {
     // 移動可能なので右へ移動
     hspeed = PLAYER_HSPEED;
+    dir = DIR_RIGHT;
   }
   else {
     // 移動できないので壁に密着させる
@@ -169,21 +176,49 @@ if(vspeed &lt; 0)
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// アニメの状態を判定
+            <string>/// 状態を判定
 if(hspeed == 0 and vspeed == 0)
 {
   // 待機中
-  animState = ANIM_STAND;
+  state = STATE_STAND;
 }
 else if(hspeed != 0 and vspeed == 0)
 {
   // 歩き中
-  animState = ANIM_WALK;
+  state = STATE_RUN;
 }
 else if(vspeed != 0)
 {
   // ジャンプ中
-  animState = ANIM_JUMP;
+  state = STATE_JUMP;
+}
+
+tAnim++;
+switch(state)
+{
+case STATE_STAND:
+  subImage = 0;
+  if(tAnim%120 &gt; 110)
+  {
+    subImage = 2;
+  }
+  break;
+  
+case STATE_RUN:
+  subImage = 1;
+  if(tAnim%12 &lt; 6)
+  {
+    subImage = 0;
+  }
+  break;
+  
+case STATE_JUMP:
+  subImage = 1;
+  break;
+  
+case STATE_DAMAGE:
+  subImage = 3;
+  break;
 }
 
 </string>
@@ -372,40 +407,15 @@ move_contact_solid(270, -1);
           <argument>
             <kind>1</kind>
             <string>/// プレイヤーの描画
-var subImage = 0;
-switch(animState)
+if(dir == DIR_RIGHT)
 {
-case ANIM_STAND:
-  // 待機中
-  if(irandom(30) == 0)
-  {
-    subImage = 2;
-  }
-  else
-  {
-    subImage = 0;
-  }
-  break;
-  
-case ANIM_WALK:
-  // 歩き中
-  if(x % 2 == 0)
-  {
-    subImage = 0;
-  }
-  else
-  {
-    subImage = 1;
-  }  
-  break;
-  
-case ANIM_JUMP:
-  // ジャンプ中
-  subImage = 1;
-  break;
+  draw_sprite(spr_player, subImage, x, y);
 }
-
-draw_sprite(spr_player, subImage, x, y);
+else
+{
+  // 反転して描画する
+  draw_sprite_ext(spr_player, subImage, x+sprite_width, y, -1, 1, 0, c_white, 1);
+}
 
 </string>
           </argument>
