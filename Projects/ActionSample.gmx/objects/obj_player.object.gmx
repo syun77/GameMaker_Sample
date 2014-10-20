@@ -54,19 +54,19 @@ gravity_direction = 270;
 // 横方向への移動量を初期化
 hspeed = 0;
 if(keyboard_check(vk_left)) {
-  if(place_free(x-5, y)) {
+  if(place_free(x-PLAYER_HSPEED, y)) {
     // 移動可能なので左へ移動
-    hspeed = -5;
+    hspeed = -PLAYER_HSPEED;
   }
   else {
     // 移動できないので壁に密着させる
-    move_contact_solid(180, -1);
+    move_contact_solid(180, GRID_SIZE);
   }
 }
 else if(keyboard_check(vk_right)) {
-  if(place_free(x+5, y)) {
+  if(place_free(x+PLAYER_HSPEED, y)) {
     // 移動可能なので右へ移動
-    hspeed = 5;
+    hspeed = PLAYER_HSPEED;
   }
   else {
     // 移動できないので壁に密着させる
@@ -80,7 +80,7 @@ else {
 
 if(keyboard_check_pressed(vk_space)) {
   // ジャンプ
-  vspeed = -7;
+  vspeed = -PLAYER_VSPEED;
   // 重力を有効にする
   gravity = 0.3;
 }
@@ -108,12 +108,45 @@ if(keyboard_check_pressed(vk_space)) {
             <string>/// 重力の判定
 if(place_free(x, y+1)) {
   // 床がないので落下
-  gravity = 0.3;
+  gravity = PLAYER_GRAVITY;
 }
 else {
   // 下に床がある
   //vspeed = 0;
   gravity = 0;
+}
+
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// 上の壁ヒットをチェックする
+if(vspeed &lt; 0)
+{
+  if(place_free(x, y+vspeed) == false)
+  {
+    // 上の壁に当たるので移動できない
+    vspeed = 0;
+    
+    // 上の壁に密着させる
+    move_contact_solid(90, GRID_SIZE);
+  }
 }
 
 </string>
