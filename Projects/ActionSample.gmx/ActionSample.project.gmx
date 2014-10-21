@@ -21,7 +21,7 @@
   <rooms name="rooms">
     <room>rooms\rm_main</room>
   </rooms>
-  <constants number="10">
+  <constants number="14">
     <constant name="GRID_SIZE">32</constant>
     <constant name="PLAYER_HSPEED">3</constant>
     <constant name="PLAYER_VSPEED">7</constant>
@@ -32,6 +32,10 @@
     <constant name="STATE_DAMAGE">3</constant>
     <constant name="DIR_RIGHT">0</constant>
     <constant name="DIR_LEFT">1</constant>
+    <constant name="GAMESTATE_INIT">0</constant>
+    <constant name="GAMESTATE_MAIN">1</constant>
+    <constant name="GAMESTATE_STAGECLEAR">2</constant>
+    <constant name="GAMESTATE_GAMEOVER">3</constant>
   </constants>
   <help>
     <rtf>help.rtf</rtf>
