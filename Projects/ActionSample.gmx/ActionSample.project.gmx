@@ -17,9 +17,12 @@
     <object>objects\obj_player</object>
     <object>objects\obj_gameMgr</object>
     <object>objects\obj_goal</object>
+    <object>objects\obj_debugMgr</object>
   </objects>
   <rooms name="rooms">
-    <room>rooms\rm_main</room>
+    <room>rooms\rm_boot</room>
+    <room>rooms\rm_001</room>
+    <room>rooms\rm_002</room>
   </rooms>
   <constants number="14">
     <constant name="GRID_SIZE">32</constant>
