@@ -169,39 +169,6 @@ else {
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// 上の壁ヒットをチェックする
-if(vspeed &lt; 0)
-{
-  if(place_free(x, y+vspeed) == false)
-  {
-    // 上の壁に当たるので移動できない
-    vspeed = 0;
-    
-    // 上の壁に密着させる
-    move_contact_solid(90, -1);
-  }
-}
-
-</string>
-          </argument>
-        </arguments>
-      </action>
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
             <string>/// 状態を判定
 if(hspeed == 0 and vspeed == 0)
 {
@@ -274,7 +241,7 @@ case STATE_DAMAGE:
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>床ヒット</string>
+            <string>上下壁ヒット</string>
           </argument>
         </arguments>
       </action>
@@ -294,12 +261,29 @@ case STATE_DAMAGE:
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// 重力と落下速度を無効化する
+            <string>/// 垂直方向への移動を無効化する
 x += hspeed; // 左右にはぶつからないので足し込む
-gravity = 0;
-vspeed = 0;
-// 下にある床に密着させる
-move_contact_solid(270, -1);
+
+if(vspeed &lt; 0)
+{
+  // 上の壁ヒに当たった
+  if(place_free(x, y+vspeed) == false)
+  {
+    // 上の壁に当たるので移動できない
+    vspeed = 0;
+    
+    // 上の壁に密着させる
+    move_contact_solid(90, -1);
+  }
+}
+else
+{
+  // 下の床に着地した
+  gravity = 0;
+  vspeed = 0;
+  // 下にある床に密着させる
+  move_contact_solid(270, -1);
+}
 
 </string>
           </argument>
