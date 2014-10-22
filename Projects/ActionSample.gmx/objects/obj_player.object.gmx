@@ -71,7 +71,7 @@ if(keyboard_check(vk_left)) {
   }
   else {
     // 移動できないので壁に密着させる
-    move_contact_solid(180, GRID_SIZE);
+    move_contact_solid(180, PLAYER_HSPEED);
   }
 }
 else if(keyboard_check(vk_right)) {
@@ -82,7 +82,7 @@ else if(keyboard_check(vk_right)) {
   }
   else {
     // 移動できないので壁に密着させる
-    move_contact_solid(0, -1);
+    move_contact_solid(0, PLAYER_HSPEED);
   }
 }
 
@@ -262,27 +262,20 @@ case STATE_DAMAGE:
           <argument>
             <kind>1</kind>
             <string>/// 垂直方向への移動を無効化する
-x += hspeed; // 左右にはぶつからないので足し込む
-
 if(vspeed &lt; 0)
 {
-  // 上の壁ヒに当たった
-  if(place_free(x, y+vspeed) == false)
-  {
-    // 上の壁に当たるので移動できない
-    vspeed = 0;
-    
-    // 上の壁に密着させる
-    move_contact_solid(90, -1);
-  }
+  // 上の壁に当たった
+  // 上の壁に密着させる
+  move_contact_solid(90, abs(vspeed));
+  vspeed = 0;
 }
 else
 {
   // 下の床に着地した
+  // 下にある床に密着させる
+  move_contact_solid(270, abs(vspeed));
   gravity = 0;
   vspeed = 0;
-  // 下にある床に密着させる
-  move_contact_solid(270, -1);
 }
 
 </string>
