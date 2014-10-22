@@ -9,6 +9,7 @@
     <sprite>sprites\spr_wall</sprite>
     <sprite>sprites\spr_player</sprite>
     <sprite>sprites\spr_goal</sprite>
+    <sprite>sprites\spr_iron</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
@@ -18,6 +19,7 @@
     <object>objects\obj_gameMgr</object>
     <object>objects\obj_goal</object>
     <object>objects\obj_debugMgr</object>
+    <object>objects\obj_iron</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_boot</room>
@@ -39,7 +41,7 @@
     <constant name="GAMESTATE_MAIN">1</constant>
     <constant name="GAMESTATE_STAGECLEAR">2</constant>
     <constant name="GAMESTATE_GAMEOVER">3</constant>
-    <constant name="ROOM_START">rm_001</constant>
+    <constant name="ROOM_START">rm_002</constant>
   </constants>
   <help>
     <rtf>help.rtf</rtf>
