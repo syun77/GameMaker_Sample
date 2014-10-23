@@ -143,7 +143,7 @@ case GAMESTATE_GAMEOVER:
 if(text != "")
 {
   draw_set_halign(fa_center);
-  draw_text(room_width/2, room_height/2, text);
+  draw_text(640/2, 480/2, text);
 }
 
 </string>

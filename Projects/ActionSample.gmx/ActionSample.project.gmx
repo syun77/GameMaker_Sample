@@ -31,6 +31,7 @@
     <room>rooms\rm_title</room>
     <room>rooms\rm_001</room>
     <room>rooms\rm_002</room>
+    <room>rooms\rm_003</room>
   </rooms>
   <constants number="15">
     <constant name="GRID_SIZE">32</constant>
