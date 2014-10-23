@@ -22,6 +22,7 @@
     <object>objects\obj_debugMgr</object>
     <object>objects\obj_iron</object>
     <object>objects\obj_floor</object>
+    <object>objects\obj_floorMove</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_boot</room>
