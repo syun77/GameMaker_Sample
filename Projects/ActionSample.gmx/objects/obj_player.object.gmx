@@ -109,10 +109,22 @@ else if(keyboard_check(vk_right)) {
             <string>/// ジャンプする
 if(keyboard_check_pressed(vk_space))
 {
+  // ジャンプできるかどうか
+  var bJump = false;
   if(place_free(x, y+1) == false)
   {
     // 接地しているのでジャンプできる
-    // ジャンプ
+    bJump = true;
+  }
+  if(place_meeting(x, y+1, obj_floor))
+  {
+    // 床に着地している
+    bJump = true;
+  }
+  
+  if(bJump)
+  {
+    // ジャンプできる
     vspeed = -PLAYER_VSPEED;
     // 重力を有効にする
     gravity = PLAYER_GRAVITY;
@@ -140,12 +152,10 @@ if(keyboard_check_pressed(vk_space))
           <argument>
             <kind>1</kind>
             <string>/// 重力の判定
-if(place_free(x, y+1)) {
-  // 床がないので落下
-  gravity = PLAYER_GRAVITY;
-}
-else {
-  // 下に床がある
+// 重力を設定
+gravity = PLAYER_GRAVITY;
+if(place_free(x, y+1) == false) {
+  // 下に床があるので重力を無効化
   gravity = 0;
 }
 
