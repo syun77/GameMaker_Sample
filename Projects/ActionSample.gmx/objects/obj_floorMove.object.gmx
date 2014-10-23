@@ -34,7 +34,7 @@ hspeed = 1;
         </arguments>
       </action>
     </event>
-    <event eventtype="3" enumb="0">
+    <event eventtype="3" enumb="1">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -56,6 +56,28 @@ if(place_free(x+hspeed, y) == false)
 {
   // 移動量を反転
   hspeed = -hspeed;
+}
+
+// プレイヤーを動かす
+if(instance_exists(obj_player) == false)
+{
+  // プレイヤーが存在しない場合はチェック不要
+  exit;
+}
+if(place_meeting(x, y-1, obj_player) == false)
+{
+  // 上にプレイヤーはいない
+  exit;
+}
+
+// 上にプレイヤーがいるので動かしてみる
+with(obj_player)
+{
+  if(place_free(x + other.hspeed, y))
+  {
+    // 動かせる
+    x += other.hspeed;
+  }
 }
 
 </string>
