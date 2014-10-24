@@ -25,10 +25,12 @@
     <object>objects\obj_floor</object>
     <object>objects\obj_floorMove</object>
     <object>objects\obj_titleMgr</object>
+    <object>objects\obj_endingMgr</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_boot</room>
     <room>rooms\rm_title</room>
+    <room>rooms\rm_ending</room>
     <room>rooms\rm_001</room>
     <room>rooms\rm_002</room>
     <room>rooms\rm_003</room>
