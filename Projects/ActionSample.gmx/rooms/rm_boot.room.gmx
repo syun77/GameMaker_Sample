@@ -10,7 +10,7 @@
   <persistent>0</persistent>
   <colour>12632256</colour>
   <showcolour>-1</showcolour>
-  <code>if(debug_mode)
+  <code>if(DEBUG)
 {
   // デバッグオブジェクトを生成
   instance_create(0, 0, obj_debugMgr);
