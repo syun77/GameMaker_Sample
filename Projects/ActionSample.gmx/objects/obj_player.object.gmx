@@ -64,10 +64,10 @@ dir = DIR_RIGHT;
 // 横方向への移動量を初期化
 hspeed = 0;
 if(keyboard_check(vk_left)) {
+  dir = DIR_LEFT;
   if(place_free(x-PLAYER_HSPEED, y)) {
     // 移動可能なので左へ移動
     hspeed = -PLAYER_HSPEED;
-    dir = DIR_LEFT;
   }
   else {
     // 移動できないので壁に密着させる
@@ -75,10 +75,10 @@ if(keyboard_check(vk_left)) {
   }
 }
 else if(keyboard_check(vk_right)) {
+  dir = DIR_RIGHT;
   if(place_free(x+PLAYER_HSPEED, y)) {
     // 移動可能なので右へ移動
     hspeed = PLAYER_HSPEED;
-    dir = DIR_RIGHT;
   }
   else {
     // 移動できないので壁に密着させる
@@ -432,7 +432,14 @@ if(dir == DIR_RIGHT)
 else
 {
   // 反転して描画する
-  draw_sprite_ext(spr_player, subImage, x+sprite_width, y, -1, 1, 0, c_white, 1);
+  var px = x+sprite_width;
+  var py = y;
+  var scX = -1; // スケールX値を反転
+  var scY = 1;
+  var rot = 0;
+  var col = c_white;
+  var a   = 1;
+  draw_sprite_ext(spr_player, subImage, px, py, scX, scY, rot, col, a);
 }
 
 </string>
