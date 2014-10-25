@@ -33,10 +33,8 @@ if(other.vspeed &lt; 0)
   exit;
 }
 
-// コリジョンマスクの高さ
-var sy = other.bbox_bottom - other.bbox_top
 // プレイヤーの足元座標を求める
-var ty = other.y + sy;
+var ty = other.bbox_bottom;
 // 接地座標と足元座標の差を求める
 var dy = ty - y;
 if(dy &gt; 16)
@@ -45,10 +43,14 @@ if(dy &gt; 16)
   exit;
 }
 
+// コリジョンマスクの高さ
+var sy = other.bbox_bottom - other.bbox_top;
+// 床にぴったり乗れる座標を求める
+var py = y - sy;
 with(other)
 {
   // 設置した床の座標に合わせる
-  y = other.y - sy;
+  y = py;
   // 重力無効化
   vspeed = 0;
   gravity = 0;

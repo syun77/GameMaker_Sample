@@ -64,6 +64,13 @@ if(instance_exists(obj_player) == false)
   // プレイヤーが存在しない場合はチェック不要
   exit;
 }
+
+if(obj_player.vspeed != 0)
+{
+  // 着地していないので移動させない
+  exit;
+}
+
 if(place_meeting(x, y-1, obj_player) == false)
 {
   // 上にプレイヤーはいない
