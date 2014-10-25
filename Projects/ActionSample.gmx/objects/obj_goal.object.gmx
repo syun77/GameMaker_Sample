@@ -60,6 +60,11 @@ with(other)
 {
   // プレイヤーを消す
   instance_destroy();
+  
+  // エフェクト再生
+  var px = x + sprite_width/2;
+  var py = y + sprite_height/2;
+  effect_create_above(ef_ring, px, py, 1, c_green);
 }
 
 // ステージクリアフラグを立てる
