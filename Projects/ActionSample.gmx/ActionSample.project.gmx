@@ -12,6 +12,7 @@
     <sprite>sprites\spr_iron</sprite>
     <sprite>sprites\spr_floor</sprite>
     <sprite>sprites\spr_floorMove</sprite>
+    <sprite>sprites\spr_logo</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
@@ -26,6 +27,7 @@
     <object>objects\obj_floorMove</object>
     <object>objects\obj_titleMgr</object>
     <object>objects\obj_endingMgr</object>
+    <object>objects\obj_logo</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_boot</room>
