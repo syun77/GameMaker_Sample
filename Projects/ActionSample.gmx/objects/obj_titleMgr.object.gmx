@@ -8,7 +8,7 @@
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
-    <event eventtype="9" enumb="32">
+    <event eventtype="3" enumb="0">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -25,8 +25,12 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// ゲーム開始
-room_goto(rm_001);
+            <string>/// ゲーム開始チェック
+if(instance_exists(obj_player) == false)
+{
+  // ゴールに入ったらゲーム開始
+  room_goto(rm_001);
+}
 
 </string>
           </argument>
