@@ -204,7 +204,7 @@ switch(state)
 {
 case STATE_STAND:
   subImage = 0;
-  if(tAnim%120 &gt; 110)
+  if(tAnim%240 &gt; 180)
   {
     // たまにまばたきする
     subImage = 2;
