@@ -1,5 +1,8 @@
-msg,draw bg
+﻿msg,draw bg
+msg,背景を描画します
 bg,001
 msg,draw ch
+msg,キャラを描画します
 ch,001
 msg,end
+msg,おしまい

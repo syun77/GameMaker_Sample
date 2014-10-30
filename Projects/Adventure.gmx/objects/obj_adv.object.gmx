@@ -27,13 +27,20 @@
             <kind>1</kind>
             <string>/// 変数初期化
 // 背景
-bg = bg_back;
+//bg = bg_back;
+bg = background_duplicate(bg_back);
 // キャラ
-ch = spr_char;
+//ch = spr_char;
+ch = sprite_duplicate(spr_char);
 // メッセージ
 message = "";
 
+// フォントを有効にする
+draw_set_font(fnt_adv);
+
+// スクリプト読み込み
 script = file_text_open_read("script.txt");
+// スクリプトを実行
 event_perform(ev_other, ev_user0);
 
 </string>
@@ -59,6 +66,10 @@ event_perform(ev_other, ev_user0);
           <argument>
             <kind>1</kind>
             <string>/// 各種リソースの破棄
+// 背景
+background_delete(bg);
+// キャラ
+sprite_delete(ch);
 // スクリプトファイルを閉じる
 file_text_close(script);
 
@@ -91,6 +102,8 @@ while(true)
 // ファイル終端チェック
 if(file_text_eof(script))
 {
+  // スクリプト終了
+  instance_destroy();
   break;
 }
 
@@ -99,8 +112,9 @@ var line = file_text_read_string(script);
 // コマンド取得
 var index = string_pos(",", line);
 var cmd = string_copy(line, 0, index-1);
-show_debug_message(cmd);
+//show_debug_message(cmd);
 
+// コマンド以降の文字列を切り出して取得
 var str = string_copy(line, index+1, 65535);
 // パラメータ取得
 var params;
@@ -118,17 +132,20 @@ while(true)
   {
     params[idx] = string_copy(line, 0, index-1);
   }
-  show_debug_message(params[idx]);
+  //show_debug_message(params[idx]);
   idx++;
   if(index == 0)
   {
-    // おしまい
+    // パラメータ取得おしまい
     break;
   }
+  
+  // 次にパラメータを取得
   str = string_copy(str, index, 65535);
-  show_debug_message(str);
+  //show_debug_message(str);
 }
 
+// コマンド実行・スクリプト実行終了判定
 var bExit = false;
 switch(cmd)
 {
@@ -141,7 +158,7 @@ case "bg":
   // 背景表示
   // いったん削除
   background_delete(bg);
-  // 読み込み
+  // ファイル名を作成して読み込み
   var filename = "bg" + params[0] + ".jpg";
   bg = background_add(filename, false, false);
   break;
@@ -149,7 +166,7 @@ case "ch":
   // キャラクター表示
   // いったん削除
   sprite_delete(ch);
-  // 読み込み
+  // ファイル名を作成して読み込み
   var filename = "ch" + params[0] + ".png";
   ch = sprite_add(filename, 1, false, false, 0, 0);  break;
 }
@@ -188,9 +205,13 @@ if(bExit)
           <argument>
             <kind>1</kind>
             <string>/// 描画
+// 背景を描画
 draw_background(bg, 0, 0);
+// キャラを描画
 draw_sprite(ch, 0, 0, 0);
+// メッセージウィンドウを描画
 draw_sprite(spr_window, 0, 0, 320);
+// テキスト描画
 draw_set_colour(c_white);
 draw_text(16, 320+48, message);
 
@@ -217,6 +238,7 @@ draw_text(16, 320+48, message);
           <argument>
             <kind>1</kind>
             <string>/// メッセージ送り
+// スクリプトを実行
 event_perform(ev_other, ev_user0);
 
 </string>
