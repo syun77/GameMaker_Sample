@@ -35,9 +35,6 @@ ch = sprite_duplicate(spr_char);
 // メッセージ
 message = "";
 
-// フォントを有効にする
-draw_set_font(fnt_adv);
-
 // スクリプト読み込み
 script = file_text_open_read("script.txt");
 // スクリプトを実行
@@ -171,8 +168,8 @@ case "ch":
   ch = sprite_add(filename, 1, false, false, 0, 0);  break;
 }
 
-  // 次の行に進める
-  file_text_readln(script);
+// 次の行に進める
+file_text_readln(script);
 
 if(bExit)
 {
@@ -212,6 +209,7 @@ draw_sprite(ch, 0, 0, 0);
 // メッセージウィンドウを描画
 draw_sprite(spr_window, 0, 0, 320);
 // テキスト描画
+draw_set_font(fnt_adv); // ※日本語フォントを使う
 draw_set_colour(c_white);
 draw_text(16, 320+48, message);
 
