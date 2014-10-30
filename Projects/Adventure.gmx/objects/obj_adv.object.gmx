@@ -159,7 +159,7 @@ case "bg":
   // いったん削除
   background_delete(bg);
   // ファイル名を作成して読み込み
-  var filename = "bg" + params[0] + ".jpg";
+  var filename = "bg/bg" + params[0] + ".jpg";
   bg = background_add(filename, false, false);
   break;
 case "ch":
@@ -167,7 +167,7 @@ case "ch":
   // いったん削除
   sprite_delete(ch);
   // ファイル名を作成して読み込み
-  var filename = "ch" + params[0] + ".png";
+  var filename = "ch/ch" + params[0] + ".png";
   ch = sprite_add(filename, 1, false, false, 0, 0);  break;
 }
 
