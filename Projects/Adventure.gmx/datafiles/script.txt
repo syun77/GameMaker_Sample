@@ -1,0 +1,5 @@
+msg,draw bg
+bg,001
+msg,draw ch
+ch,001
+msg,end
