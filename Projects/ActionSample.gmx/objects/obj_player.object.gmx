@@ -204,28 +204,32 @@ switch(state)
 {
 case STATE_STAND:
   subImage = 0;
-  if(tAnim%240 &gt; 180)
+  if(tAnim%120 &gt; 110)
   {
     // たまにまばたきする
-    subImage = 2;
+    subImage = 1;
   }
   break;
   
 case STATE_RUN:
-  subImage = 1;
+  subImage = 2;
   if(tAnim%12 &lt; 6)
   {
     // 走りと立ちを交互に繰り返す
-    subImage = 0;
+    subImage = 3;
   }
   break;
   
 case STATE_JUMP:
-  subImage = 1;
+  subImage = 2;
   break;
   
 case STATE_DAMAGE:
-  subImage = 3;
+  subImage = 5;
+  if(tAnim%4 &lt; 2)
+  {
+    subImage = 6;
+  }
   break;
 }
 
