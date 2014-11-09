@@ -28,7 +28,7 @@
             <string>/// 初期化
 tAnim    = 0; // アニメタイマー
 hspeed   = 3; // 右に移動する
-subImage = 0; // 画像番号
+subImage = 2; // 画像番号
 
 </string>
           </argument>
@@ -54,7 +54,11 @@ subImage = 0; // 画像番号
             <kind>1</kind>
             <string>/// 更新
 tAnim++;
-subImage = (tAnim % 15) / 8;
+subImage = 2;
+if(tAnim % 16 &gt;= 8)
+{
+  subImage = 3;
+}
 
 </string>
           </argument>
