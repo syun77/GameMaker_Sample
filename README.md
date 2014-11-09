@@ -12,5 +12,5 @@ GameMaker:Studioで作成したゲームのサンプルと素材
   * http://o-mega.sakura.ne.jp
 
 ## Freeフォルダ以下について
-Freeフォルダ以下の素材（画像・サウンドデータ）はフリー素材となります。こちらはこのURL( https://github.com/syun77/GameMaker_Sample )をReadme.txtなどに記載していれば自由に使えることができます。連絡などは特に不要です。
+Freeフォルダ以下の素材はフリー素材となります。こちらはこのURL( https://github.com/syun77/GameMaker_Sample )をReadme.txtなどに記載していれば自由に使えることができます。連絡などは特に不要です。
 
