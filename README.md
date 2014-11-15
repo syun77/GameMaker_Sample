@@ -6,10 +6,12 @@ GameMaker:Studioで作成したゲームのサンプルと素材
 
 
 ## 画像データについて
-ほぼすべての画像データは「おめが(Omega) / （　゜ワ゜）ノ」さんの配布しているゲームから流用させていただきました。利用を許可して頂きありがとうございました。
+「Materials/action」以下(player_strip8.pngを除く)の画像、「Materials/minigame」以下のの画像、「Materials/shooting」以下の画像、「Materials/tips/font_strip10.png」は、「おめが(Omega) / （　゜ワ゜）ノ」様の配布しているゲームから流用させていただきました。利用を許可して頂きありがとうございました。
 
 * おめが試作設計局
   * http://o-mega.sakura.ne.jp
 
+「Materials/tips/pipo-map001.png」は、ぴぽや様　http://piposozai.blog76.fc2.com/　が配布している素材を利用させていただきました。
+
 ## Freeフォルダ以下について
-画像データの2次使用は禁止しますが、Freeフォルダ以下の素材はフリー素材となります。こちらは使用報告やリードミーへの記載などは不要です。
+Materialsフォルダの画像データの2次使用は禁止しますが、Freeフォルダ以下の素材はフリー素材となります。こちらは使用報告やリードミーへの記載などは不要です。
