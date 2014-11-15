@@ -11,7 +11,10 @@ GameMaker:Studioで作成したゲームのサンプルと素材
 * おめが試作設計局
   * http://o-mega.sakura.ne.jp
 
-「Materials/tips/pipo-map001.png」は、ぴぽや様　http://piposozai.blog76.fc2.com/　が配布している素材を利用させていただきました。
+「Materials/tips/pipo-map001.png」は、ぴぽや様が配布している素材を利用させていただきました。
+
+* ぴぽや
+  * http://piposozai.blog76.fc2.com/
 
 ## Freeフォルダ以下について
 Materialsフォルダの画像データの2次使用は禁止しますが、Freeフォルダ以下の素材はフリー素材となります。こちらは使用報告やリードミーへの記載などは不要です。
