@@ -6,7 +6,7 @@ GameMaker:Studioで作成したゲームのサンプルと素材
 
 
 ## 画像データについて
-「Materials/action」以下(player_strip8.pngを除く)の画像、「Materials/minigame」以下のの画像、「Materials/shooting」以下の画像、「Materials/tips/font_strip10.png」は、「おめが(Omega) / （　゜ワ゜）ノ」様の配布しているゲームから流用させていただきました。利用を許可して頂きありがとうございました。
+「Materials/action」以下(player_strip8.pngを除く)の画像、「Materials/minigame」以下の画像、「Materials/shooting」以下の画像、「Materials/tips/font_strip10.png」は、「おめが(Omega) / （　゜ワ゜）ノ」様の配布しているゲームから流用させていただきました。利用を許可して頂きありがとうございました。
 
 * おめが試作設計局
   * http://o-mega.sakura.ne.jp
